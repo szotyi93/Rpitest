@@ -1,14 +1,9 @@
-import urllib2
-import urllib
- 
-query_args = { 'RPI':'Active' }
- 
-url = 'http://api.learn2crack.com/rpi/rpi_post.php'
- 
-data = urllib.urlencode(query_args)
- 
-request = urllib2.Request(url, data)
- 
-response = urllib2.urlopen(request).read()
- 
-print response
+import os
+hostname = "google.com" #example
+response = os.system("ping -c 1 " + hostname)
+
+#and then check the response...
+if response == 0:
+  print hostname, 'is up!'
+else:
+  print hostname, 'is down!'
