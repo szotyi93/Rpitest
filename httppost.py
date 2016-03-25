@@ -1,5 +1,5 @@
 import os
-hostname = "google.com" #example
+hostname = 192.168.1.101 #example
 response = os.system("ping -c 1 " + hostname)
 
 #and then check the response...
